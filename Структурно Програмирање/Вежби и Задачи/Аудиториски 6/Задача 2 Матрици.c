@@ -31,18 +31,17 @@ int main() {
 
         }
     }
+    difference = max - min;
 
     for (int i = 0; i < n; i++) {
         printf("\n");
         for (int j = 0; j < m; j++) {
+            if(i == j) MAT[i][j] = difference;
             printf("%4d ", MAT[i][j]);
         }
     }
 
-
-   difference = max - min;
-
     printf("\n Max: %d Min: %d", max, min);
-
+    printf("\n Difference: %d", difference);
     return 0;
 }
