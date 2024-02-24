@@ -14,10 +14,7 @@ int main() {
         if(scanf("%d",&n)) {
             array[i] = n;
             size++;
-
         } else break;
-
-
     }
 
     for(int i = 0; i < size; i++){
@@ -25,7 +22,6 @@ int main() {
             if(array[i] == array[j]) {
                 for (int k = j; k < size - 1; k++) {
                     array[k] = array[k+1];
-
                 }
                 j--;
                 size--;
