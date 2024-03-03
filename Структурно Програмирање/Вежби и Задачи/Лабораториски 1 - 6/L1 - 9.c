@@ -18,7 +18,7 @@ int main() {
         printf("\n");
         for(int j = 0; j < n; j++) {
             if(j+i == n-1 || j > n - i - 1 )printf("*");
-            else printf("-");
+            else printf(" ");
         }
     }
 
