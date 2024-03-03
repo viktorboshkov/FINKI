@@ -1,27 +1,25 @@
-// Од тастатура се чита еден непарен цел број n кој е поголем или еднаков на 5.
-// Со помош на знакот * да се исцрта математичкиот симбол за бесконечност,
-// кој би се добил како во примерот подолу, за n=5:
-// *   *
-// ** **
-// * * *
-// ** **
-// *   *
+// сите операции на два броја
 
 #include <stdio.h>
-int main() {
 
-    int n;
-    scanf("%d", &n);
-    if(n >= 5) {
-        for (int i = 0; i < n; i++) {
-            printf("\n");
-            for (int j = 0; j < n; j++) {
-                 if(j == 0 || j == n - 1 || i == j || i + j == n - 1) printf("*");
-                 else printf(" ");
-            }
-        }
+int main() {
+    int n, m;
+
+    scanf("%d %d", &n, &m);
+
+    if(m > n){
+        int tmp;
+        tmp = m;
+        m = n;
+        n = tmp;
     }
 
+    printf("%d + %d = %d\n", n, m, n + m);
+    printf("%d - %d = %d\n", n, m, n - m);
+    printf("%d * %d = %d\n", n, m, n * m);
+    printf("%d / %d = %d\n", n, m, n / m);
+    printf("%d %% %d = %d\n", n, m, n % m);
 
     return 0;
 }
+
