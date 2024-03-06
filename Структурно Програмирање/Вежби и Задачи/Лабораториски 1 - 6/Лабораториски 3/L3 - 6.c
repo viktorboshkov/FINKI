@@ -20,10 +20,10 @@ int main(){
 
     if(points > 50 && points <= 100){ // не влергува да рачуна оцена ако поените се помалку од 51
 
-        if(points >= 51 && points <= 61) grade = 6;
-        if(points >= 61 && points <= 71) grade = 7;
-        if(points >= 71 && points <= 81) grade = 8;
-        if(points >= 81 && points <= 91) grade = 9;
+        if(points >= 51 && points <= 60) grade = 6;
+        if(points >= 61 && points <= 70) grade = 7;
+        if(points >= 71 && points <= 80) grade = 8;
+        if(points >= 81 && points <= 90) grade = 9;
         if(points >= 91 && points <= 100) grade = 10;
 
         sign = points % 10;
