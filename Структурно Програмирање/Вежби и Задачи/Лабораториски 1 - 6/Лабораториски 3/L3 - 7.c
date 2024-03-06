@@ -27,7 +27,6 @@ int main() {
     date /= 100;
 
     if(Year > 0 && Month > 0  && Month <= 12 && Day > 0 && Day <= 31) {
-
         if (Year % 400 == 0 || (Year % 4 == 0 && Year % 100 != 0)) {
             if(Day <= 29) {
                 validDate = 1;
@@ -35,7 +34,7 @@ int main() {
             }
         } else {
             switch (Month) {
-                case 1:   case 3: case 5: case 7: case 8: case 10: case 12:
+                case 1: case 3: case 5: case 7: case 8: case 10: case 12:
                     if (Day <= 31) {
                         validDate = 1;
                     }
@@ -49,6 +48,7 @@ int main() {
                     }
                     break;
                 default:
+        
                     printf("Not a valid month."); // NE
                     break;
             }
@@ -58,8 +58,8 @@ int main() {
     if(validDate) {
         if(leapYear)printf("Leap Year\n");
         printf("Valid date: %d / %d / %d", Day, Month, Year); //DA
-
     }
+        
     else printf("Not a valid date."); // NE
 
     return 0;
