@@ -24,14 +24,10 @@ int main() {
         if(alphabet[i] == c) {
             initialLetter = i;
             x = initialLetter + k;
-            break;
         }
         while(x > 26){
           x-=26;
         }
-
-        break;
-
     }
     printf("%c", alphabet[x]);
 
