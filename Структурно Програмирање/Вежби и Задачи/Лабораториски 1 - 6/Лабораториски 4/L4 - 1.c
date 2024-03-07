@@ -10,14 +10,14 @@ int main(){
 
     scanf("%d", &N);
 
-    for(int i = 0; i < N;i++){
+    for(int i = 0; i < N; i++){
         scanf("%d", &element);
         array[i] = element;
         if(array[i] % 2 == 0) array[i]++;
         else if(array[i] % 2 != 0) array[i]--;
     }
 
-    for(int i = 0; i < N;i++){
+    for(int i = 0; i < N; i++){
         printf("%d ", array[i]);
     }
 
