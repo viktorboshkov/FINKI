@@ -98,7 +98,6 @@ int main (){
 
                     }
 
-
                     if (i > 0 && j > 0 && i < M - 1 && j < M - 1) {
                         if (matrix[i][j + 1] == 1) count++;
                         if (matrix[i][j - 1] == 1) count++;
@@ -108,9 +107,6 @@ int main (){
                         if (matrix[i - 1][j - 1] == 1) count++;
                         if (matrix[i - 1][j + 1] == 1) count++;
                         if (matrix[i - 1][j] == 1) count++;
-
-
-
                         matrix[i][j] = count;
                         count = 0;
                     }
@@ -127,9 +123,6 @@ int main (){
             }
             printf("\n");
         }
-
-
-
     }
         return 0;
 }
