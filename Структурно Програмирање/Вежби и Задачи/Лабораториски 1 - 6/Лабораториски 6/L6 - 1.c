@@ -17,15 +17,19 @@ int main (){
     M += 2;
     N += 2;
     // the border is 4 sides so we add +! for each side up down left right
-    int matrix[M][N];
-
+    int matrix[M][N],
+        oldMatrix[M][N];
     if(M > -1 && N <= 98) {
- // original value of M was supposed to be  M > 1 now its -2 which brings it down to 1-2  = -1 and N to 100 - 2 = 98
+        // original value of M was supposed to be  M > 1 now its -2 which brings it down to 1-2  = -1 and N to 100 - 2 = 98
         for (int i = 0; i < M; i++) { // fill up array
             for (int j = 0; j < N; j++) {
                 matrix[i][j] = 0; //set a border with 0s outside the matrix so that its easier to caluclate the edges
-                if((i > 0 && i < M - 1) && (j > 0 && j < M - 1)) scanf("%d", &matrix[i][j]); // fill in only inside the border
-            }
+                oldMatrix[i][j] = 0;
+                if((i > 0 && i < M - 1) && (j > 0 && j < M - 1)) {
+                    scanf("%d", &matrix[i][j]); // fill in only inside the border
+                    oldMatrix[i][j] = matrix[i][j];
+                }
+                }
         }
 
         for (int i = 0; i < M; i++) {
@@ -53,13 +57,17 @@ int main (){
 
         for (int i = 0; i < M; i++) { //print
             for (int j = 0; j < N; j++) {
-                if((i > 0 && i < M - 1) && (j > 0 && j < M - 1)) printf("%2d ", matrix[i][j]);
+                if((i > 0 && i < M - 1) && (j > 0 && j < M - 1)) {
+                    if(oldMatrix[i][j] == 1) printf(" * ");
+                    else printf("%2d ", matrix[i][j]);
+
+                }
             }
             printf("\n");
         }
 
     }
-        return 0;
+    return 0;
 }
 
 
