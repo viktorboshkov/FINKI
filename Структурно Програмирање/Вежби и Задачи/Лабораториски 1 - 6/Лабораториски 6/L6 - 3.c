@@ -25,6 +25,7 @@ int main (){
             }
         count = 0;
         }
+    
     printf("%d", postion);
 
     return 0;
