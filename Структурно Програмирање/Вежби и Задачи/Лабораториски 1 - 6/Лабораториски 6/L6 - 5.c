@@ -4,11 +4,10 @@
 
 void elka(int n){
     int middle = n / 2;
-
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             if(i + j == middle || j <= middle + i && j > middle - i) printf("*");
-              else printf("-");
+              else printf(" ");
         }
         printf("\n");
         if(i == middle) break;
