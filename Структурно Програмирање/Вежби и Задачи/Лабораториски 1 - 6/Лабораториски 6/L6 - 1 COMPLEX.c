@@ -7,7 +7,6 @@
 
 //Цел: Формирање на нова матрица, каде што сите елементи со вредност 0 во влезната матрица ќе бидат заменети со бројот на соседни елементи со вредност 1.
 
-
 #include <stdio.h>
 int main (){
     int M, N, count = 0;
@@ -60,7 +59,6 @@ int main (){
                         matrix[i][j] = count;
                         count = 0;
                     }
-
                     if (i == M - 1) {
                         if (j == 0) {
                             if (matrix[i - 1][j] == 1) count++;
@@ -86,7 +84,6 @@ int main (){
                             count = 0;
                         }
                     }
-
                     if (j == M - 1 && i > 0 && i < M - 1) {
                         if (matrix[i - 1][j] == 1) count++;
                         if (matrix[i - 1][j - 1] == 1) count++;
@@ -97,7 +94,6 @@ int main (){
                         count = 0;
 
                     }
-
                     if (i > 0 && j > 0 && i < M - 1 && j < M - 1) {
                         if (matrix[i][j + 1] == 1) count++;
                         if (matrix[i][j - 1] == 1) count++;
@@ -110,10 +106,8 @@ int main (){
                         matrix[i][j] = count;
                         count = 0;
                     }
-
                 }
             }
-
         }
 
         for (int i = 0; i < M; i++) { //print
@@ -126,7 +120,6 @@ int main (){
     }
         return 0;
 }
-
 
 //5 5
 //0 1 0 1 0
