@@ -17,7 +17,6 @@ int main(){
         grade,
         sign;
     scanf("%d", &points);
-
     if(points > 50 && points <= 100){ // не влергува да рачуна оцена ако поените се помалку од 51
 
         if(points >= 51 && points <= 60) grade = 6;
