@@ -1,1 +1,1 @@
-Lectures and exercises from Structural Programming in C - FINKI
+Lectures and exercises from Structural Programming in C - FINKI.
